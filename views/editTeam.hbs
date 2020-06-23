@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+</head>
+<body>
+    <form action="/teams/{{team.id}}/edit" method="POST">
+        Description: <input type="text" value="{{team.description}}" name="desc">
+        <br>
+        Procedure Info.: <input type="text" value="{{team.procedure_info}}" name="procedure">
+        <br>
+        Due date: <input type="date" value="{{team.due_date}}" name="due_date">
+        <br>
+        Start Time: <input type="time" value="{{team.start_at}}" name="start_time">
+        <br>
+        End Time: <input type="time" value="{{team.end_at}}" name="end_time">
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

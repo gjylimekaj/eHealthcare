@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendors</title>
+</head>
+<body>
+    <form action="/vendors/{{vendor.id}}/edit" method="POST">
+        Company: <input type="text" value={{vendor.company}} name="company">
+        <br>
+        Tel. Num.: <input type="text" value={{vendor.tel_num}} name="tel_num">
+        <br>
+        Address: <input type="text" value={{vendor.address}} name="address">
+        <br>
+        <button>Save</button>
+    </form>
+</body>
+</html>

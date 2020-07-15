@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+</head>
+<body>
+    <form action="/doctors/{{doc.id}}/edit" method="POST">
+        Speciality: <input type="text" value="{{doc.speciality}}" name="spec">
+        <br>
+        Starts Work: <input type="time" value="{{doc.start_work}}" name="start_work">
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

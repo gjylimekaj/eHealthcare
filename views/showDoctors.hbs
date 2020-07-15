@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Teams</title>
+    <title>All Doctors</title>
 </head>
 <style>
     table{
@@ -28,31 +28,25 @@
     <table>
         <thead>
             <th>ID</th>
-            <th>Description</th>
-            <th>Procedure Info</th>
-            <th>Due Date</th>
-            <th>Start at</th>
-            <th>End at</th>
+            <th>Speciality</th>
+            <th>Starts Work</th>
             <th>Action</th>
         </thead>
         <tbody>
-            {{#each teams}}
+            {{#each docs}}
                 <tr>
                     <td>{{this.id}}</td>
-                    <td>{{this.description}}</td>
-                    <td>{{this.procedure_info}}</td>
-                    <td>{{this.due_date}}</td>
-                    <td>{{this.start_at}}</td>
-                    <td>{{this.end_at}}</td>
+                    <td>{{this.speciality}}</td>
+                    <td>{{this.start_work}}</td>
                     <td>
-                        <a href="/teams/{{this.id}}/edit">Edit</a>
-                        <a href="/teams/{{this.id}}/delete">Delete</a>
+                        <a href="/doctors/{{this.id}}/edit">Edit</a>
+                        <a href="/doctors/{{this.id}}/delete">Delete</a>
                     </td>
                 </tr>
             {{/each}}
         </tbody>
     </table>
 
-    <a href="/teams/new">Create a Team</a>
+    <a href="/doctors/new">Add a Doctor</a>
 </body>
 </html>

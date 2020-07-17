@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Prescriptions</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        border: 1px solid grey;
+    }
+    th{
+        background-color: dimgray;
+        color: white;
+        padding: 20px 50px;
+    }
+    td{
+        background-color: azure;
+        color: dimgray;
+        padding: 20px 50px;
+    }
+    tr{
+        border-bottom: ;
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {{#each prescriptions}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.description}}</td>
+                    <td>
+                        <a href="/prescriptions/{{this.id}}/edit">Edit</a>
+                        <a href="/prescriptions/{{this.id}}/delete">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <a href="/prescriptions/new">Add a Prescriptions</a>
+</body>
+</html>

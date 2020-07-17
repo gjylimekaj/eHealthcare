@@ -5,6 +5,8 @@ const doctorController = require("./controllers/doctorController");
 const departmentController = require("./controllers/departmentController");
 const vendorController = require("./controllers/vendorController");
 const roleController = require("./controllers/roleController");
+const appointmentController = require("./controllers/appointmentController");
+const patientController = require("./controllers/patientController");
 
 // Homepage
 router.get('/', (req,res) => {
@@ -45,5 +47,19 @@ router.post('/roles/new', roleController.create);
 router.get('/roles/:id/edit', roleController.edit);
 router.post('/roles/:id/edit', roleController.update);
 router.get('/roles/:id/delete', roleController.delete);
+
+router.get('/appointments', appointmentController.showAll);
+router.get('/appointments/new', appointmentController.new);
+router.post('/appointments/new', appointmentController.create);
+router.get('/appointments/:id/edit', appointmentController.edit);
+router.post('/appointments/:id/edit', appointmentController.update);
+router.get('/appointments/:id/delete', appointmentController.delete);
+
+router.get('/patients', patientController.showAll);
+router.get('/patients/new', patientController.new);
+router.post('/patients/new', patientController.create);
+router.get('/patients/:id/edit', patientController.edit);
+router.post('/patients/:id/edit', patientController.update);
+router.get('/patients/:id/delete', patientController.delete);
 
 module.exports = router;

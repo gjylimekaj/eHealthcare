@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+<body>
+    <form action="/appointmnts/{{appointment.id}}/edit" method="POST">
+        Description: <input type="text" value="{{appointment.description}}" name="description">
+        <br>
+        Date: <input type="text" value="{{appointment.date}}" name="date">
+        <br>
+        Cancelation: <input type="text" value="{{appointment.cancelation}}" name="date">
+        <button>Submit</button>
+    </form>
+</body>
+</html>

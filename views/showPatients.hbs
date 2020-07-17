@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Patients</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        border: 1px solid grey;
+    }
+    th{
+        background-color: dimgray;
+        color: white;
+        padding: 20px 50px;
+    }
+    td{
+        background-color: azure;
+        color: dimgray;
+        padding: 20px 50px;
+    }
+    tr{
+        border-bottom: ;
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Weight</th>
+            <th>Arrived at</th>
+            <th>Left at</th>
+            <th>Action</th>
+
+        </thead>
+        <tbody>
+            {{#each patients}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.weight}}</td>
+                    <td>{{this.arrived_at}}</td>
+                    <td>{{this.left_at}}</td>
+                    <td>
+                        <a href="/patients/{{this.id}}/edit">Edit</a>
+                        <a href="/patients/{{this.id}}/delete">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <a href="/patients/new">Add a Patient</a>
+</body>
+</html>

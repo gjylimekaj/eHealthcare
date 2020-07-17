@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+<body>
+    <form action="/appointments/new" method="POST">
+        Description: <input type="text" name="description">
+        <br>
+        Date: <input type="date" name="date">
+        <br>
+        Cancelation: <select name="cancelation" id="cancelation">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+</select>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+

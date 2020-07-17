@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients</title>
+</head>
+<body>
+    <form action="/patients/{{patient.id}}/edit" method="POST">
+       Weight: <input type="decimal" value="{{patient.weight}}" name="weight">
+        <br>
+        Arrived at: <input type="time" value="{{patient.arrived_at}}" name="arrived_at">
+        <br>
+        Left at: <input type="time" value="{{patient.left_at}}" name="left_at">
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

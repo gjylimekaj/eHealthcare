@@ -8,6 +8,8 @@ const roleController = require("./controllers/roleController");
 const prescriptionController = require("./controllers/prescriptionController");
 const medicineController = require("./controllers/medicineController");
 const taskController = require("./controllers/taskController");
+const patientController = require("./controllers/patientController");
+const appointmentController = require("./controllers/appointmentController");
 
 
 // Homepage
@@ -70,5 +72,19 @@ router.post('/tasks/new', taskController.create);
 router.get('/tasks/:id/edit', taskController.edit);
 router.post('/tasks/:id/edit', taskController.update);
 router.get('/tasks/:id/delete', taskController.delete);
+
+router.get('/patients', patientController.showAll);
+router.get('/patients/new', patientController.new);
+router.post('/patients/new', patientController.create);
+router.get('/patients/:id/edit', patientController.edit);
+router.post('/patients/:id/edit', patientController.update);
+router.get('/patients/:id/delete', patientController.delete);
+
+router.get('/appointments', appointmentController.showAll);
+router.get('/appointments/new', appointmentController.new);
+router.post('/appointments/new', appointmentController.create);
+router.get('/appointments/:id/edit', appointmentController.edit);
+router.post('/appointments/:id/edit', appointmentController.update);
+router.get('/appointments/:id/delete', appointmentController.delete);
 
 module.exports = router;

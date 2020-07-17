@@ -6,12 +6,13 @@
     <title>Appointments</title>
 </head>
 <body>
-    <form action="/appointmnts/{{appointment.id}}/edit" method="POST">
+    <form action="/appointments/{{appointment.id}}/edit" method="POST">
         Description: <input type="text" value="{{appointment.description}}" name="description">
         <br>
         Date: <input type="text" value="{{appointment.date}}" name="date">
         <br>
         Cancelation: <input type="text" value="{{appointment.cancelation}}" name="date">
+        <br>
         <button>Submit</button>
     </form>
 </body>

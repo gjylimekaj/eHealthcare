@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const router = require("./router");
-const models = require('../models');
+const router = require("./src/router");
+const models = require('./models');
 const Op = models.Sequelize.Op;
-const db = require('../models');
-const Vendor = require('../models/vendor')
+const db = require('./models');
+const Vendor = require('./models/vendor')
 
 const app = express();
+
+app.use(express.static(__dirname + '/public'));
 
 // Set View file
 app.set("views", "views");

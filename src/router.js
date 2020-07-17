@@ -16,6 +16,24 @@ const appointmentController = require("./controllers/appointmentController");
 router.get('/', (req,res) => {
     res.render("index");
 });
+router.get('/about-us', (req,res) => {
+    res.render("about");
+});
+
+router.get('/services', (req,res) => {
+    res.render("services");
+});
+
+router.get('/news',(req,res) => {
+    res.render("news");
+});
+
+router.get('/contact', (req,res) => {
+    res.render("contact");
+});
+router.get('/appointment', (req,res) => {
+    res.render("appointment-calendar/apoint");
+});
 
 router.get('/teams', teamController.showAll);
 router.get('/teams/new', teamController.new);
